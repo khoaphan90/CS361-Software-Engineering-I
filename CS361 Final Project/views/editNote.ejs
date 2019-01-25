@@ -1,0 +1,17 @@
+<% include partials/header %>
+<% for(var i = 0; i < context.length; i++){ %>
+    <div class="ui main text container segment">
+            <div class="ui small header">Edit Note for <%= context[i].month %>
+        </div>
+        <form class="ui form" action="/updateNote/<%= context[i].month %>" method="POST">
+            <div class="field">
+                <textarea name="note" value="<%= context[i].note %>" required>
+                    <%= context[i].note %>
+                </textarea>
+            </div>
+            <input class="ui green med button" value="Save" type="submit">
+        </form>
+    </div>
+<% }; %>
+<% include partials/footer %>
+

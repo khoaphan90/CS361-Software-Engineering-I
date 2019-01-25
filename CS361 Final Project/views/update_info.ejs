@@ -1,0 +1,32 @@
+<% include partials/header %>
+<h2>Update Infornation </h2>
+<% for(var i = 0; i < context.length; i++){ %>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+function updateInfo(id){
+    $.ajax({
+        url: '/update_info/' + id,
+        type: 'POST',
+        data: $('#update-information').serialize(),
+        success: function(result){
+            window.location.replace("/information");
+        }
+    })
+};
+</script>
+<form id="update-information" action ="/update_info" method="post" >
+        First Name:
+        <input type="text" name="fname" value="<%= context[i] ? context[i].fname : ''%>"><br>
+        Last Name:
+        <input type="text" name="lname" value="<%= context[i] ? context[i].lname : ''%>"><br>
+        Location:
+        <input type="text" name="address" value="<%= context[i] ? context[i].address : '' %>"><br>
+        Age:
+        <input type="number" name="age" value="<%= context[i] ? context[i].age : ''%>" "min="0" max="100"><br>
+        Income:
+        <input type="text" name="annual_inc" value="<%= context[i] ? context[i].annual_inc : '' %>" ><br>
+      
+</form>
+	<button onclick="updateInfo(<%= context[i] ? context[i].user_id : ''%>)">Update</button>
+<% }; %> 	
+<% include partials/footer %>

@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+    <div class="ui main text container segment">
+           <div class="ui huge header">Forgot Password
+        </div>
+        <form class="ui form" action="/" method="GET"> <!-- THIS SHOULD BE A POST-->
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+            </div>
+            <input class="ui red med basic button" type="submit">
+        </form>
+        <form class="ui form" action="/">
+            <input class="ui blue med  button" value="Cancel" type="submit">
+        </form>
+    </div>
+
+
+<% include partials/footer %>
+

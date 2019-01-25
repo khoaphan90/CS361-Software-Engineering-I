@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+    <div class="ui main text container segment">
+        <div class="ui huge header">Large Purchase Financing Calculator
+        </div>
+        
+        <% var totalExpenses = 0; var annualIncome = 0;%>
+        <% var total = 0; var estPayment = 0;%>
+
+        <% fin_people.forEach(function(list){ %>
+            <% annualIncome = list.annual_inc %>
+            <b>Annual Income:</b> $<%= annualIncome %><br>
+        <% }); %>
+
+        
+        <% context.forEach(function(list){ %>
+            <% totalExpenses += list.expenses %>
+        <% }); %>
+
+            <b>Annual Expenses:</b> $<%= totalExpenses %><br>
+        <% total = annualIncome - totalExpenses %>
+            <b>Available Income:</b> $<%= total %><br>
+        <form method="POST" action="/calculate">
+
+        <b>Purchase Amount: </b> $<%= userInput.noAmount %><br>
+        <input type="number" name="amount"><br>
+
+        <b>Number of Years:</b> <%= userInput.noYears %><br>
+        <input type="number" name="years"><br>
+
+        <input type="submit" value="Set"><br>
+        </form>
+
+               <% estPayment = userInput.noAmount / (userInput.noYears * 12) %>
+        <p><h1><u>Est. Monthly Payments:</u> $<%= estPayment.toFixed([2]) %></h1></p>
+        
+
+<div id="result"> </div>
+
+    </div>
+
+<% include partials/footer %>
+

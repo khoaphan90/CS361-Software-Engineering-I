@@ -1,0 +1,139 @@
+body {
+    padding-top: 6%;
+}
+
+#container {
+	width: 360px;
+	margin: 100px auto;
+}
+
+.desc{ text-align: center; }
+
+
+div #addbtn {
+	width: 200px;
+	margin-left: 42%;
+}
+
+h2 {
+	padding-top: 10px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.icon {
+    font-size: 2em;
+}
+
+#delete {
+    display: inline;
+}
+
+
+div.centered{ 
+	width: 100%;
+}
+
+div.columns{ 
+	width: 900px;  
+	margin: 0 auto;
+}
+
+div.columns div{ 
+	width: 120px; 
+	position: relative;
+	float: left;
+	border: 1px solid black;
+	text-align: center;
+	margin-left: -1px;
+	margin-top: 20px;
+	font-weight: bold;
+	color: black;
+	text-decoration: underline;
+}
+
+div.columns-list{ 
+	width: 900px;  
+	margin: 0 auto;
+}
+div.columns-list div{ 
+	width: 120px; 
+	position: relative;
+	float: left;
+	border: 1px solid black;
+	text-align: center;
+	margin-left: -1px;
+	margin-top: -1px;
+}
+
+div.clear{
+	clear: both;
+}
+
+/*=================GENRE===============*/
+#genre{ 
+	width: 1000px;  
+}
+
+ #genre div.name{ width: 200px; padding: 3px; }
+
+ #genre div.desc{ width: 800px; 
+	border: 1px solid black;
+	text-align: left;
+	padding: 3px;
+}
+/*=================GENRE===============*/
+
+
+/*=================GAME================*/
+#game{ 
+	width: 1100px;  
+}
+
+#game div.name{ width: 250px; }
+#game div.year{ width: 120px; }
+#game div.pub{ width: 200px; }
+#game div.genre{ width: 160px; }
+#game div.review{ width: 120px; }
+#game div.platform{ width: 250px; }
+/*=================GENRE===============*/
+
+
+/*==============PLATFORM===============*/
+#platform{ 
+	width: 400px;  
+}
+
+#platform div.make{ width: 100px; }
+#platform div.name{ width: 250px; }
+#platform div.year{ width: 50px; }
+/*================PLATFORM=============*/
+
+
+/*=============PUBLISHER===============*/
+#pub{ 
+	width: 570px;  
+}
+
+#pub div.name{ width: 200px; }
+#pub div.location{ width: 250px; }
+#pub div.year{ width: 120px; }
+/*===============PUBLISHER=============*/
+
+/*=============REVIEW===============*/
+#review{ 
+	width: 1000px;  
+}
+
+#review div.gameName{ width: 300px; }
+#review div.score{ width: 100px; }
+#review div.description{ width: 600px; }
+/*===============REVIEW=============*/
+
+/*=============SEARCH===============*/
+#search{ 
+	width: 500px;  
+}
+
+#search div.gameName{ width: 500px; }
+/*===============SEARCH=============*/

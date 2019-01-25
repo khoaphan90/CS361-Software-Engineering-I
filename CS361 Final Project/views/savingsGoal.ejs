@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+    <div class="ui main text container segment">
+        <div class="ui huge header">Savings Calculator
+        </div>
+
+        <% var estPayment = 0; %>
+
+        <form method="POST" action="/saveCalc">
+        <b>Amount to Save:</b> $<%= userInput.noAmount %><br> 
+        <input type="number" name="amount" value="0"><br>
+        <b>How many months:</b> <%= userInput.noMonths %><br>
+        <input type="number" name="monthAmount" value="0"><br>
+        <input type="submit" value="Set"><br>
+        </form>
+        <% estPayment = (userInput.noAmount / userInput.noMonths) %>
+        <p><h1>You need to save: $<%= estPayment.toFixed([2]) %> per month</h1></p>
+        
+
+<div id="result"> </div>
+
+    </div>
+
+<% include partials/footer %>
+

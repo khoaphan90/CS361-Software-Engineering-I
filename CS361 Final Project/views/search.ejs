@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+
+<div>
+	<h2>Register here!</h2>
+</div>
+
+ <div class="centered">
+ 	<div class="columns" id="search">
+		<div class="gameName">Please fill out the information below</div>
+		<div>
+			<
+
+		
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="centered">
+ 	<% for(var i = 0; i < context.length; i++){ %>
+ 	<div class="columns-list" id="search">
+		<div class="gameName">
+			<a href="/editGame/<%= context[i].gameID %>" method="get" action="/editGame">
+				<%= context[i].name %>
+			</a>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<% }; %>
+</div>
+
+
+<% include partials/footer %>
+

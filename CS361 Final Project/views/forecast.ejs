@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+<div>
+	<h2>Monthly Forecast</h2>
+</div>
+
+ <div class="centered">
+ 	<div class="columns" id="info">
+		<div class="perNam">Expense Category</div>
+		<div class="expenses">Last Month </div>
+		<div class="desc">Current Month</div>
+		<div class="desc">Next Month</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="centered">
+ 	<% for(var i = 0; i < context.length; i++){ %>
+ 	<div class="columns-list" id="info">
+		<div class="category"><%= context[i] ? context[i].CATEGORY : ''%></div>
+		<div class="lastmonth"><%= context[i] ? context[i].LASTMONTH : '' %></div>
+		<div class="currentmonth"><%= context[i] ? context[i].CURRENTMONTH : ''%></div>
+		<div class="nextmonth"><%= context[i] ? context[i].NEXTMONTH : ''%></div>
+	</div>
+	<div class="clear"></div>
+	<% }; %>
+</div>
+
+<% include partials/footer %> 
